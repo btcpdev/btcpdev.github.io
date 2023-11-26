@@ -1,0 +1,80 @@
+<head>
+  <style>
+    .header {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      /* border: 3px solid red; */
+    }
+    .content {
+      /* border: 3px solid blue; */
+    }
+    .image {
+      display: flex;
+      /* flex-direction: column; */
+      justify-content:center;
+      align-items: center;
+      width: 100%;
+      /* border: 3px solid red; */
+    }
+    .return {
+      color: #b77;
+    }
+  </style>
+</head>
+<html>
+  <body>
+    <section class="header">
+      <h1>folder - mac</h1>
+      <h2>macOS BTCP node and cli for testnet</h2>
+    </section>
+    <section class="content">
+      <p>1. Download the 4 files from the mac folder in GitHub by clicking on the files individually
+         and select download raw file</p>
+         <p class="image"><img alt="screenshot of raw download link on GitHub" src="../images/mac_raw_dld.jpg" /></p>
+         <p>2. Right click on start menu button and select Run from the context menu</p>
+      <p class="image"><img alt="screenshot of start context menu" src="../images/win_ctx_run.jpg" /></p>
+      <p>3. Type cmd into the run dialog and press OK</p>
+      <p class="image"><img alt="screenshot of run dialog" src="../images/win_dlg_run_cmd.jpg" /></p>
+      <p>you should see the cmd.exe window opoen up on your PC</p>
+      <p class="image"><img alt="screenshot of cmd window" src="../images/win_cmd.jpg" /></p>
+      <p>4. In the cmd window type in</p>
+      <div>
+        <pre>
+          cd Downloads<span class="return">&lt;RETURN&gt;</span>
+          dir<span class="return">&lt;RETURN&gt;</span>
+        </pre>
+      </div>
+      <p>and you should see a list of the files you downloaded from step 1</p>
+      <p class="image"><img alt="screenshot of cmd window with directory listing" src="../images/win_cmd_dir.jpg" /></p>
+      <p>5. In the cmd window type in</p>
+      <div>
+        <pre>
+          zcashd<span class="return">&lt;RETURN&gt;</span>
+        </pre>
+      </div>
+      <p class="image"><img alt="screenshot running zcash initially" src="../images/win_cmd_zcash1.jpg" /></p>
+      <p>note the path listed - you need to change the btcp part to your own windows account name and move over the btcp.conf file to that folder</p>
+      <p class="image"><img alt="screenshot highlighting user name change" src="../images/win_cmd_zcash2.jpg" /></p>
+      <p>6. use notepad to open and edit the highlighted 'btcp' in the btcp.conf file you've just moved</p>
+      <pre>
+        exportdir=C:\Users\<span class="return">btcp</span>\AppData\Roaming\btcp
+      </pre>
+      <p>update the line to</p>
+      <pre>
+        exportdir=C:\Users\<span class="return">your account name</span>\AppData\Roaming\btcp
+      </pre>
+      <p>7. Run zcashd as in step 5 and this time you should see the node start up</p>
+      <p>8. A popup will appear when it's first run requesting access to connect through the firewall - allow access and the node should begin to download the testnet blocks</p>
+      <p class="image"><img alt="screenshot of node" src="../images/win_cmd_node.jpg" /></p>
+      <p>9. To stop the node, open another cmd window, change to the Downloads directory as in step 4 and type in</p>
+      <div>
+        <pre>
+          zcash-cli stop<span class="return">&lt;RETURN&gt;</span>
+        </pre>
+      </div>
+      <p class="image"><img alt="screenshot of node" src="../images/win_cmd_zcash-cli.jpg" /></p>
+  </section>
+  </body>
+</html>
