@@ -12,13 +12,17 @@
         /* Styling the first parallax's 
         height, width and background color */
         .parallax-1 {
+            display: flex;
+            justify-content: center;
             width: 100%;
-            height: 600px;
-            background: url(
-'images/btcpround.png');
+            height: auto;
+            background: url('images/btcpround.png');
             background-size: 100% 100%;
             background-attachment: fixed;
+            padding: 200px 0;
         }
+
+        .parallax-1 img {max-width: 100%; height: auto}
  
         /* Styling the title of first parallax */
         .parallax-1 h2 {
@@ -39,8 +43,7 @@
         .parallax-2 {
             width: 100%;
             height: 600px;
-            background: url(
-'images/btcpround.png');
+            background: url('images/btcpround.png');
             background-size: 100% 100%;
             background-attachment: fixed;
         }
@@ -77,38 +80,35 @@
             font-family: Verdana;
             background-color: black;
             color: white;
+            padding: 100px 0;
         }
     </style>
 </head>
  
 <body>
  
-    <!-- Giving title of the first parallax -->
+    <!--Content of first parallax -->
     <div class="parallax-1">
-        <h2>Bitcoin Private</h2>
+      <img src='images/index/wallet-1.png'>
     </div>
  
     <!--Content of first parallax -->
-    <div class="para-1">
-        <img src='images/btcpround.png'>
-    </div>
- 
-    <!-- Giving title of the first parallax -->
-    <div class="parallax-2">
-        <img src='images/index/wallet-1.png'>
+    <div class="parallax-1">
+      <img src='images/index/wallet-1.png'>
     </div>
  
     <!--Content of first parallax -->
-    <div class="para-2">
+    <div class="parallax-1">
+      <img src='images/index/wallet-1.png'>
+    </div>
+ 
+    <!--Content of first parallax -->
+    <div class="parallax-1">
       <img src='images/index/wallet-1.png'>
     </div>
  
     <!--This will be same as first parallax-->
     <div class="parallax-1">
-      <img src='images/index/wallet-1.png'>
-    </div>
- 
-    <div class="para-2">
       <img src='images/index/wallet-1.png'>
     </div>
 </body>
